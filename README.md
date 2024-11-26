@@ -22,12 +22,14 @@
 --privileged \
 ultralytics/ultralytics:latest-jetson-jetpack4
 
-3. 필요 라이브러리 설치 Docker 컨테이너 안에서 필요한 라이브러리를 설치합니다:
+2. **필요 라이브러리 설치 Docker 컨테이너 안에서 필요한 라이브러리를 설치합니다**
+   
 apt-get update && apt-get install -y python3-tk nano
 pip install pyserial
 pip install easyocr==1.4
 apt install python3-jetson-gpio
 apt install -y busybox
+
 EasyOCR 수정 EasyOCR의 utils.py를 아래와 같이 수정합니다:
 
 경로: /usr/local/lib/python3.8/dist-packages/easyocr
