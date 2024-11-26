@@ -10,6 +10,7 @@
 
 1. **Docker 컨테이너 실행**
    먼저 Docker 컨테이너를 실행하여 환경을 준비해야 합니다. 아래 명령어를 사용합니다:
+   
    sudo docker run -it --rm --ipc=host --runtime=nvidia --gpus all \
 -e DISPLAY=$DISPLAY \
 -v /tmp/.X11-unix:/tmp/.X11-unix \
@@ -21,7 +22,7 @@
 --privileged \
 ultralytics/ultralytics:latest-jetson-jetpack4
 
-2. 필요 라이브러리 설치 Docker 컨테이너 안에서 필요한 라이브러리를 설치합니다:
+3. 필요 라이브러리 설치 Docker 컨테이너 안에서 필요한 라이브러리를 설치합니다:
 apt-get update && apt-get install -y python3-tk nano
 pip install pyserial
 pip install easyocr==1.4
