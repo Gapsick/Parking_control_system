@@ -31,6 +31,7 @@ sudo docker run -it --rm --ipc=host --runtime=nvidia --gpus all \
 
 ### 2. 필요 라이브러리 설치
 Docker 컨테이너 안에서 아래 명령어를 실행하여 필요한 라이브러리를 설치하세요:
+```bash
 apt-get update && apt-get install -y python3-tk nano pip python3-pip
 pip install pyserial easyocr==1.4
 apt-get install -y busybox
@@ -38,8 +39,9 @@ apt-get install -y busybox
 ### EasyOCR 수정
 EasyOCR의 utils.py 파일을 수정해야 합니다.
 수정 경로: /usr/local/lib/python3.8/dist-packages/easyocr/utils.py
+
+```bash
 # 기존 코드:
 img = cv2.resize(img, (int(model_height*ratio), model_height), interpolation=Image.ANTIALIAS)
-
 # 수정 코드:
 img = cv2.resize(img, (int(model_height*ratio), model_height), interpolation=1)
