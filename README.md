@@ -47,3 +47,12 @@ img = cv2.resize(img, (int(model_height*ratio), model_height), interpolation=Ima
 # 수정 코드:
 img = cv2.resize(img, (int(model_height*ratio), model_height), interpolation=1)
 ```
+
+## 실행 방법
+1. 실행 전 준비사항을 마친 후, GitHub에서 GateAccessSystem 프로젝트를 클론한 디렉터리로 이동합니다.
+2. 해당 디렉터리에서 plateServoControl.py 파일을 실행하려면, 아래 명령어를 사용합니다:
+
+```bash
+python3 GateAccessSystem/plateServoControl.py
+```
+위 명령어를 실행하면, plateServoControl.py 스크립트가 시작됩니다. 이 스크립트는 차량 번호판을 인식하고, 해당 번호를 Jetson Nano에서 처리한 후, 모터를 제어하여 차단기를 자동으로 조작합니다.
